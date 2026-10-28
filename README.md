@@ -48,68 +48,30 @@ The engine will implement the following business rules:
 11. Loyalty bonuses for consecutive unlimited packs.
 12. Billing events that cross midnight.
 
-## Development Roadmap
+**Design Documentation**
 
-Development will proceed incrementally.
+The design-document.md file contains the business rules, edge cases, proposed system components and design decisions for the project.
+Project Status
 
-- [ ] Create the Java 21 and Spring Boot project skeleton.
-- [ ] Implement subscriber registration.
-- [ ] Implement core-balance recharge and validity renewal.
-- [ ] Implement unlimited-pack purchase and validity calculation.
-- [ ] Implement pack stacking and queue management.
-- [ ] Implement voice, data and SMS usage processing.
-- [ ] Implement quota deduction, rollover and FUP.
-- [ ] Implement roaming and loyalty bonuses.
-- [ ] Implement subscriber lifecycle transitions.
-- [ ] Generate date-range usage and transaction ledgers.
-- [ ] Add automated tests for business rules and edge cases.
-- [ ] Introduce persistent database storage.
-
-## Project Structure
-
-```text
-prepaid-recharge-engine/
-├── src/
-│   ├── main/
-│   │   └── java/com/capstone/recharge/
-│   └── test/
-│       └── java/com/capstone/recharge/
-├── design-document.md
-├── README.md
-├── .gitignore
-└── pom.xml
-```
-
-The project structure will evolve as additional components are implemented.
-
-## Getting Started
-
-### Prerequisites
-
-- Java Development Kit (JDK) 21
-- Maven, or the Maven Wrapper included with the project
-- Git
-
-## Design Documentation
-
-The `design-document.md` file contains the business rules, edge cases, proposed system components and design decisions for the project.
-
-## Project Status
-
-**Status:** Initial Development
+Status: Initial Development
 
 The initial development phase focuses on establishing the project structure and implementing the first core flows:
 
-- Subscriber registration.
-- Core-balance recharge and validity renewal.
-- Unlimited-pack purchase and validity calculation.
+Subscriber registration
 
-Additional business rules will be implemented and tested incrementally.
+Core-balance recharge and validity renewal.
 
-## Future Scope
+Unlimited-pack purchase and validity calculation.
 
-- Persistent storage for subscriber accounts, packs and transactions.
-- REST APIs for subscriber registration, recharges and usage processing.
-- Automated testing of complex stacking and billing scenarios.
-- Improved transaction consistency and concurrency handling.
-- Comprehensive ledger generation and reporting.
+
+**Future Scope:**
+
+Persistent storage for subscriber accounts, packs and transactions.
+
+REST APIs for subscriber registration, recharges and usage processing.
+
+Automated testing of complex stacking and billing scenarios.
+
+Improved transaction consistency and concurrency handling.
+
+Comprehensive ledger generation and reporting.
