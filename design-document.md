@@ -223,11 +223,11 @@ The event ordering at the GRACE-to-SUSPENDED boundary must be deterministic.
 
 **Expected:** The engine evaluates the continuity of the three packs using their validity intervals. If all continuity conditions are satisfied, the subscriber receives the 2 GB loyalty add-on with seven-day validity.
 
-### EC-09: Voice Call Crossing Midnight
+### EC-09: Pack Cancellation Refund
 
-**Input:** A voice call starts at 23:58 and ends at 00:03.
+**Input:** A customer cancels a data pack after money is deducted.
 
-**Expected:** The entire event is billed using the applicable rules and pack state at the event's start time. The event is not split across two billing days.
+**Expected:** Money will be refunded to the customer's bank account within 24hrs and will reflect in 3-4 business days.
 
 ## 6. Proposed System Components
 
