@@ -12,14 +12,12 @@ The system will also maintain a ledger that allows transactions and subscriber b
 
 - Register subscribers and maintain their account information.
 - Process core-balance recharges and prepaid pack purchases.
-- Calculate pack validity and handle queued packs.
-- Apply stacking precedence when selecting packs for usage events.
 - Calculate charges and deduct the appropriate quota or balance.
 - Manage data rollover and fair usage policy (FUP).
 - Handle roaming and loyalty bonuses.
 - Manage subscriber lifecycle transitions.
 - Generate transaction and usage ledgers.
-- Handle boundary conditions and insufficient-balance scenarios consistently.
+- Handle exception cases and insufficient-balance scenarios consistently.
 
 ## 3. Technology Stack
 
@@ -31,7 +29,7 @@ The system will also maintain a ledger that allows transactions and subscriber b
 | Version control | Git |
 | Initial testing | JUnit 5 |
 | Initial storage | In-memory Java collections |
-| Future persistent storage | PostgreSQL, subject to project requirements |
+| Future persistent storage | MongoDB, subject to project requirements |
 
 The first implementation will focus on the core business logic and sample-input testing. Database persistence and additional REST API endpoints can be introduced incrementally.
 
