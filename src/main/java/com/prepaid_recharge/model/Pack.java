@@ -1,14 +1,10 @@
 package com.prepaid_recharge.model;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-@Document(collection = "packs")
 public class Pack {
 
-    @Id
     private String packId;
 
     private String subscriberId;
@@ -44,6 +40,10 @@ public class Pack {
 
     public String getPackId() {
         return packId;
+    }
+
+    public void setPackId(String packId) {
+        this.packId = packId;
     }
 
     public String getSubscriberId() {

@@ -1,16 +1,11 @@
 
 package com.prepaid_recharge.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Document(collection = "subscribers")
 public class Subscriber {
 
-    @Id
     private String subscriberId;
 
     private String name;

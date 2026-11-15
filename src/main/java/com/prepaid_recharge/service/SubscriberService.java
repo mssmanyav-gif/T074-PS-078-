@@ -1,6 +1,8 @@
 package com.prepaid_recharge.service;
 
+import com.prepaid_recharge.model.Pack;
 import com.prepaid_recharge.model.Subscriber;
+import com.prepaid_recharge.repository.PackRepository;
 import com.prepaid_recharge.repository.SubscriberRepository;
 import org.springframework.stereotype.Service;
 
@@ -11,9 +13,11 @@ import java.time.LocalDate;
 public class SubscriberService {
 
     private final SubscriberRepository repository;
+    private final PackRepository packRepository;
 
-    public SubscriberService(SubscriberRepository repository) {
+    public SubscriberService(SubscriberRepository repository, PackRepository packRepository) {
         this.repository = repository;
+        this.packRepository = packRepository;
     }
 
     public Subscriber registerSubscriber(
@@ -49,8 +53,16 @@ public class SubscriberService {
     }
 
     public Subscriber recharge(String id, String packId) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'recharge'");
+        Subscriber subscriber = getSubscriber(id);
+        Pack pack = packRepository.findById(packId)
+                .orElseThrow(() -> new IllegalArgumentException("Pack not found"));
+
+        if (pack.getPrice() == null) {
+            throw new IllegalArgumentException("Pack price is missing");
+        }
+
+        subscriber.setCoreBalance(subscriber.getCoreBalance().add(pack.getPrice()));
+        return repository.save(subscriber);
     }
 }
 

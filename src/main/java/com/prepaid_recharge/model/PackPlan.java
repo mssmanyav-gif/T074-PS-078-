@@ -1,14 +1,9 @@
 package com.prepaid_recharge.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.math.BigDecimal;
 
-@Document(collection = "pack_plans")
 public class PackPlan {
 
-    @Id
     private String packCode;
     private String packType;        // CORE, UNLIMITED, DATA_ADDON, SMS_ADDON, ROAMING_ADDON
     private BigDecimal price;
