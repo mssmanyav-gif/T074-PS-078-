@@ -1,7 +1,7 @@
 package com.prepaid_recharge.controller;
 
-import com.prepaid.engine.model.Subscriber;
-import com.prepaid.engine.service.SubscriberService;
+import com.prepaid_recharge.model.Subscriber;
+import com.prepaid_recharge.service.SubscriberService;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
@@ -17,6 +17,7 @@ public class SubscriberController {
         this.service = service;
     }
 
+    // Register a new subscriber
     @PostMapping
     public Subscriber register(@RequestBody RegistrationRequest request) {
         return service.registerSubscriber(
@@ -28,9 +29,17 @@ public class SubscriberController {
         );
     }
 
+    // Get subscriber details
     @GetMapping("/{id}")
     public Subscriber getSubscriber(@PathVariable String id) {
         return service.getSubscriber(id);
+    }
+
+    // Recharge by pack 
+    @PostMapping("/{id}/recharge-pack")
+    public Subscriber rechargeWithPack(@PathVariable String id,
+                                       @RequestBody PackRechargeRequest request) {
+        return service.recharge(id, request.packId());
     }
 
     public record RegistrationRequest(
@@ -40,5 +49,8 @@ public class SubscriberController {
             LocalDate activationDate,
             BigDecimal initialBalance
     ) {}
+
+    public record PackRechargeRequest(String packId) {}
 }
+
 

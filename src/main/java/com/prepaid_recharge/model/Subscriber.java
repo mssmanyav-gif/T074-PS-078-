@@ -18,6 +18,8 @@ public class Subscriber {
     private LocalDate activationDate;
     private BigDecimal coreBalance;
     private String status;
+    private LocalDate coreBalanceValidUntil;
+    private BigDecimal rolloverDataGB;
 
     public Subscriber() {
     }
@@ -63,5 +65,17 @@ public class Subscriber {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+    public LocalDate getCoreBalanceValidUntil() {
+    return coreBalanceValidUntil;
+    }
+    public void setCoreBalanceValidUntil(LocalDate coreBalanceValidUntil) {
+    this.coreBalanceValidUntil = coreBalanceValidUntil;
+    }
+    public BigDecimal getRolloverDataGB() {
+    return rolloverDataGB;
+    }
+    public void setRolloverDataGB(BigDecimal rolloverDataGB) {
+    this.rolloverDataGB = rolloverDataGB;
     }
 }

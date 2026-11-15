@@ -1,0 +1,13 @@
+pack_code,pack_type,price,validity_days,daily_data_gb,data_gb,sms_count,sms_per_day,description
+CORE_10,CORE,10,0,,,,,Core top-up Rs 10 (renews 30-day core validity)
+CORE_50,CORE,50,0,,,,,Core top-up Rs 50
+CORE_100,CORE,100,0,,,,,Core top-up Rs 100
+UNL_299,UNLIMITED,299,28,1.5,,,100,"Unlimited voice, 1.5 GB/day, 100 SMS/day, 28 days"
+UNL_359,UNLIMITED,359,28,2,,,100,"Unlimited voice, 2 GB/day, 100 SMS/day, 28 days"
+UNL_719,UNLIMITED,719,56,2.5,,,100,"Unlimited voice, 2.5 GB/day, 100 SMS/day, 56 days"
+UNL_839,UNLIMITED,839,84,2,,,100,"Unlimited voice, 2 GB/day, 100 SMS/day, 84 days"
+DATA_1GB_7D,DATA_ADDON,19,7,,1,,,"1 GB data add-on, 7 days"
+DATA_3GB_28D,DATA_ADDON,58,28,,3,,,"3 GB data add-on, 28 days"
+SMS_100_28D,SMS_ADDON,29,28,,,100,,"100 SMS add-on, 28 days"
+ROAM_49,ROAMING_ADDON,49,7,,1,,,"Roaming add-on: free roaming voice + 1 GB roaming-first data, 7 days"
+LOYALTY_2GB,DATA_ADDON,0,7,,2,,,System-granted loyalty add-on (never recharged by command)

@@ -1,7 +1,7 @@
 package com.prepaid_recharge.service;
 
-import com.prepaid.engine.model.Subscriber;
-import com.prepaid.engine.repository.SubscriberRepository;
+import com.prepaid_recharge.model.Subscriber;
+import com.prepaid_recharge.repository.SubscriberRepository;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -46,6 +46,11 @@ public class SubscriberService {
         return repository.findById(id)
                 .orElseThrow(() ->
                         new IllegalArgumentException("Subscriber not found"));
+    }
+
+    public Subscriber recharge(String id, String packId) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'recharge'");
     }
 }
 
